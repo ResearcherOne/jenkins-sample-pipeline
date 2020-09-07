@@ -9,6 +9,7 @@ pipeline {
         
         stage('Test') {
             steps {
+                input 'Proceed Second Step?'
                 sh 'echo "Second Step"'
             }
         }
