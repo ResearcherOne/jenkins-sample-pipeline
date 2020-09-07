@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                def inputFile = input message: 'Upload file', parameters: [file(name: 'data.zip')]
                 sh 'echo "First Step"'
             }
         }
